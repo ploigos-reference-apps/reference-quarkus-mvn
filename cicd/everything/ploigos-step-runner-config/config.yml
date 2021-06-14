@@ -5,7 +5,7 @@ step-runner-config:
 
   global-defaults:
     organization: ploigos-ref
-    application-name: ref-quarkus-mvn-jenkins-std
+    application-name: ref-quarkus-mvn-jenkins-eve
     service-name: fruit
 
     maven-servers:
@@ -21,7 +21,7 @@ step-runner-config:
         registry.redhat.io:
             username: 6340056|tssc-integration-infra
         quay-quay-enterprise.apps.tssc.rht-set.com:
-            username: ploigos-ref+workflow_reference_quarkus_mvn_jenkins_workflow_standard
+            username: ploigos-ref+workflow_reference_quarkus_mvn
 
   generate-metadata:
   - implementer: Maven
@@ -90,7 +90,7 @@ step-runner-config:
       argocd-username: admin
       argocd-skip-tls: True
       deployment-config-helm-chart-path: charts/reference-quarkus-mvn-deploy
-      deployment-config-repo: http://gitea.tssc.rht-set.com/ploigos-reference-applications/reference-quarkus-mvn-cloud-resources_jenkins_workflow-standard.git
+      deployment-config-repo: http://gitea.tssc.rht-set.com/ploigos-reference-applications/reference-quarkus-mvn-cloud-resources_jenkins_workflow-everything.git
       deployment-config-helm-chart-values-file-image-tag-yq-path: 'image.tag'
       git-username: sa-ploigos-ref-apps
       git-email: 'napsspo+tssc@redhat.com'
@@ -107,7 +107,7 @@ step-runner-config:
   - implementer: ConfiglintFromArgocd
   - implementer: Configlint
     config:
-      rules: cicd/ValidateEnv/
+      rules: cicd/everything/ValidateEnv/
 
   uat:
   - implementer: MavenSeleniumCucumber
