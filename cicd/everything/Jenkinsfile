@@ -7,7 +7,7 @@ retriever: modernSCM([
 
 // run the pipeline
 ploigosWorkflowEverything(
-    stepRunnerConfigDir: 'cicd/ploigos-step-runner-config/',
+    stepRunnerConfigDir: 'cicd/everything/ploigos-step-runner-config/',
     pgpKeysSecretName: 'pgp-keys-ploigos-workflow-ref-quarkus-mvn-jenkins-std-fruit',
 
     workflowServiceAccountName: 'ploigos-workflow-ref-quarkus-mvn-jenkins-std-fruit',
@@ -25,6 +25,6 @@ ploigosWorkflowEverything(
     workflowWorkerImageUAT: 'ploigos/ploigos-tool-maven:edge',
 
     stepRunnerUpdateLibrary: true,
-    stepRunnerLibSourceUrl: 'git+https://github.com/ploigos/ploigos-step-runner.git@main',
+    stepRunnerLibSourceUrl: 'git+https://github.com/itewk/ploigos-step-runner.git@feature/buildah-defaults',
     workflowWorkersImagePullPolicy: 'Always'
 )
