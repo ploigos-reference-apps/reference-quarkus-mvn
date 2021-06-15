@@ -1,8 +1,8 @@
 // Load the Ploigos Jenkins Library
-library identifier: 'ploigos-jenkins-library@feature/everything-refactor',
+library identifier: 'ploigos-jenkins-library@main',
 retriever: modernSCM([
     $class: 'GitSCMSource',
-    remote: 'https://github.com/itewk/ploigos-jenkins-library.git'
+    remote: 'https://github.com/ploigos/ploigos-jenkins-library.git'
 ])
 
 // run the pipeline
@@ -18,6 +18,6 @@ ploigosWorkflowMinimal(
     workflowWorkerImageDeploy: 'ploigos/ploigos-tool-argocd:edge',
 
     stepRunnerUpdateLibrary: true,
-    stepRunnerLibSourceUrl: 'git+https://github.com/itewk/ploigos-step-runner.git@feature/buildah-defaults',
+    stepRunnerLibSourceUrl: 'git+https://github.com/ploigos/ploigos-step-runner.git@main',
     workflowWorkersImagePullPolicy: 'Always'
 )
