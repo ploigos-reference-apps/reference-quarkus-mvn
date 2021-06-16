@@ -119,3 +119,10 @@ step-runner-config:
     config:
       results-archive-destination-url: http://artifactory.apps.tssc.rht-set.com/artifactory/release-engineering-workflow-result-artifacts-archives
       results-archive-destination-username: tssc
+
+  generate-evidence:
+  - implementer: GenerateEvidence
+    config:
+      evidence-destination-url: http://artifactory.apps.tssc.rht-set.com/artifactory/release-engineering-workflow-evidence 
+      evidence-destination-username: tssc
+
