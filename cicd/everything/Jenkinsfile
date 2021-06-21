@@ -7,7 +7,7 @@ retriever: modernSCM([
 
 // run the pipeline
 ploigosWorkflowEverything(
-    stepRunnerConfigDir: 'cicd/everything/ploigos-step-runner-config/',
+    stepRunnerConfigDir: 'cicd/jenkins/everything/ploigos-step-runner-config/',
     pgpKeysSecretName: 'pgp-keys-ploigos-workflow-ref-quarkus-mvn-jenkins-std-fruit',
 
     workflowServiceAccountName: 'ploigos-workflow-ref-quarkus-mvn-jenkins-std-fruit',
