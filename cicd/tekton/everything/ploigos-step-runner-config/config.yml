@@ -5,7 +5,7 @@ step-runner-config:
 
   global-defaults:
     organization: ploigos-ref
-    application-name: ref-quarkus-mvn-jenkins-eve
+    application-name: ref-quarkus-mvn-tekton-eve
     service-name: fruit
 
     maven-servers:
@@ -90,7 +90,7 @@ step-runner-config:
       argocd-username: admin
       argocd-skip-tls: True
       deployment-config-helm-chart-path: charts/reference-quarkus-mvn-deploy
-      deployment-config-repo: http://gitea.tssc.rht-set.com/ploigos-reference-applications/reference-quarkus-mvn-cloud-resources_jenkins_workflow-everything.git
+      deployment-config-repo: http://gitea.tssc.rht-set.com/ploigos-reference-applications/reference-quarkus-mvn-cloud-resources_tekton_workflow-everything.git
       deployment-config-helm-chart-values-file-image-tag-yq-path: 'image.tag'
       git-username: sa-ploigos-ref-apps
       git-email: 'napsspo+tssc@redhat.com'
@@ -107,7 +107,7 @@ step-runner-config:
   - implementer: ConfiglintFromArgocd
   - implementer: Configlint
     config:
-      rules: cicd/everything/ValidateEnv/
+      rules: cicd/tekton/everything/ValidateEnv/
 
   uat:
   - implementer: MavenSeleniumCucumber
@@ -123,6 +123,6 @@ step-runner-config:
   generate-evidence:
   - implementer: GenerateEvidence
     config:
-      evidence-destination-url: http://artifactory.apps.tssc.rht-set.com/artifactory/release-engineering-workflow-evidence 
+      evidence-destination-url: http://artifactory.apps.tssc.rht-set.com/artifactory/release-engineering-workflow-evidence
       evidence-destination-username: tssc
 
