@@ -6,25 +6,8 @@ USER 0
 ##############################
 # vulenerability remediation #
 ##############################
-
-# do not update filesystem package as it requires that buildah be run as root
-# and even buildah unshare doesn't fix the problem.
-# see: https://bugzilla.redhat.com/show_bug.cgi?id=1708249#c31
 RUN microdnf update -y && \
     microdnf clean all
-
-##########################
-# compliance remediation #
-##########################
-# NOTE / WARNING / IMPORTANT:
-#   This is NOT the right way to do this.
-#   The RIGHT way would be to not use Dockerfile and use a real buildah build where we can
-#   run oscap remediation against the mounted file system and then close up the file system
-#   into an image.
-#   But.....right now.....just trying to get a reference working....
-#COPY compliance/ /var/lib/compliance/
-#RUN /var/lib/compliance/xccdf_org.ssgproject.content_rule_rpm_verify_permissions.sh \
-#    && /var/lib/compliance/xccdf_org.ssgproject.content_rule_file_permissions_unauthorized_world_writable.sh
 
 # NOTE / WARNING / IMPORTANT:
 #   work around for https://bugzilla.redhat.com/show_bug.cgi?id=1798685
