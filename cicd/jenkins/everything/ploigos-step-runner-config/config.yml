@@ -115,14 +115,23 @@ step-runner-config:
       selenium-hub-url: http://67.207.93.102:4444
 
   report:
-  - implementer: ResultArtifactsArchive
+  - name: Generate and Push Results Report
+    implementer: ResultArtifactsArchive
     config:
       results-archive-destination-url: http://artifactory.apps.tssc.rht-set.com/artifactory/release-engineering-workflow-result-artifacts-archives
       results-archive-destination-username: tssc
+  - name: Sign Results Report
+    implementer: RekorSignReport
+    config:
+      rekor-server-url: https://rekor.apps.tssc.rht-set.com/
 
   generate-evidence:
-  - implementer: GenerateEvidence
+  - name: Generate and Push Evidence
+    implementer: GenerateEvidence
     config:
       evidence-destination-url: http://artifactory.apps.tssc.rht-set.com/artifactory/release-engineering-workflow-evidence
       evidence-destination-username: tssc
-
+  - name: Sign Evidence
+    implementer: RekorSignEvidence
+    config:
+      rekor-server-url: https://rekor.apps.tssc.rht-set.com/
