@@ -12,18 +12,16 @@ ploigosWorkflowEverything(
 
     workflowServiceAccountName: 'ploigos-workflow-ref-quarkus-mvn-jenkins-std-fruit',
 
-    workflowWorkerImageDefault: 'ploigos/ploigos-ci-agent-jenkins:v0.17.0',
-    workflowWorkerImageUnitTest: 'ploigos/ploigos-tool-maven:v0.17.0',
-    workflowWorkerImagePackage: 'ploigos/ploigos-tool-maven:v0.17.0',
-    workflowWorkerImageStaticCodeAnalysis: 'ploigos/ploigos-tool-sonar:v0.17.0',
-    workflowWorkerImagePushArtifacts: 'ploigos/ploigos-tool-maven:v0.17.0',
-    workflowWorkerImageContainerOperations: 'ploigos/ploigos-tool-containers:v0.17.0',
-    workflowWorkerImageContainerImageStaticComplianceScan: 'ploigos/ploigos-tool-openscap:v0.17.0',
-    workflowWorkerImageContainerImageStaticVulnerabilityScan: 'ploigos/ploigos-tool-openscap:v0.17.0',
-    workflowWorkerImageDeploy: 'ploigos/ploigos-tool-argocd:v0.17.0',
-    workflowWorkerImageValidateEnvironmentConfiguration: 'ploigos/ploigos-tool-config-lint:v0.17.0',
-    workflowWorkerImageUAT: 'ploigos/ploigos-tool-maven:v0.17.0',
-    
-    stepRunnerUpdateLibrary: true,
-    stepRunnerLibSourceUrl: "git+https://github.com/ploigos/ploigos-step-runner.git@main"
+    workflowWorkerImageDefault: 'ploigos/ploigos-ci-agent-jenkins:pr-69',
+    workflowWorkerImageUnitTest: 'ploigos/ploigos-tool-maven:pr-69',
+    workflowWorkerImagePackage: 'ploigos/ploigos-tool-maven:pr-69',
+    workflowWorkerImageStaticCodeAnalysis: 'ploigos/ploigos-tool-sonar:pr-69',
+    workflowWorkerImagePushArtifacts: 'ploigos/ploigos-tool-maven:pr-69',
+    workflowWorkerImageContainerOperations: 'ploigos/ploigos-tool-containers:pr-69',
+    workflowWorkerImageContainerImageStaticComplianceScan: 'ploigos/ploigos-tool-openscap:pr-69',
+    workflowWorkerImageContainerImageStaticVulnerabilityScan: 'ploigos/ploigos-tool-openscap:pr-69',
+    workflowWorkerImageDeploy: 'ploigos/ploigos-tool-argocd:pr-69',
+    workflowWorkerImageValidateEnvironmentConfiguration: 'ploigos/ploigos-tool-config-lint:pr-69',
+    workflowWorkerImageUAT: 'ploigos/ploigos-tool-maven:pr-69',
+    workflowWorkerAutomatedGovernance: 'ploigos/ploigos-tool-rekor:pr-69'
 )
