@@ -8,9 +8,9 @@ retriever: modernSCM([
 // run the pipeline
 ploigosWorkflowMinimal(
     stepRunnerConfigDir: 'cicd/jenkins/minimal/ploigos-step-runner-config/',
-    pgpKeysSecretName: 'pgp-keys-ploigos-workflow-ref-quarkus-mvn-jenkins-std-fruit',
 
-    workflowServiceAccountName: 'ploigos-workflow-ref-quarkus-mvn-jenkins-std-fruit',
+    pgpKeysSecretName: 'pgp-keys-ploigos-workflow-ref-quarkus-mvn-jenkins-min-fruit',
+    workflowServiceAccountName: 'ploigos-workflow-ref-quarkus-mvn-jenkins-min-fruit',
 
     workflowWorkerImageDefault: 'ploigos/ploigos-ci-agent-jenkins:pr-69',
     workflowWorkerImagePackage: 'ploigos/ploigos-tool-maven:pr-69',
