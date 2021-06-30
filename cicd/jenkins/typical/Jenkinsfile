@@ -1,5 +1,5 @@
 // Load the Ploigos Jenkins Library
-library identifier: 'ploigos-jenkins-library@main',
+library identifier: 'ploigos-jenkins-library@v0.18.0',
 retriever: modernSCM([
     $class: 'GitSCMSource',
     remote: 'https://github.com/ploigos/ploigos-jenkins-library.git'
@@ -12,13 +12,13 @@ ploigosWorkflowTypical(
     pgpKeysSecretName: 'pgp-keys-ploigos-workflow-ref-quarkus-mvn-jenkins-typ-fruit',
     workflowServiceAccountName: 'ploigos-workflow-ref-quarkus-mvn-jenkins-typ-fruit',
 
-    workflowWorkerImageDefault: 'ploigos/ploigos-ci-agent-jenkins:pr-69',
-    workflowWorkerImageUnitTest: 'ploigos/ploigos-tool-maven:pr-69',
-    workflowWorkerImagePackage: 'ploigos/ploigos-tool-maven:pr-69',
-    workflowWorkerImageStaticCodeAnalysis: 'ploigos/ploigos-tool-sonar:pr-69',
-    workflowWorkerImagePushArtifacts: 'ploigos/ploigos-tool-maven:pr-69',
-    workflowWorkerImageContainerOperations: 'ploigos/ploigos-tool-containers:pr-69',
-    workflowWorkerImageContainerImageStaticVulnerabilityScan: 'ploigos/ploigos-tool-openscap:pr-69',
-    workflowWorkerImageDeploy: 'ploigos/ploigos-tool-argocd:pr-69',
-    workflowWorkerImageUAT: 'ploigos/ploigos-tool-maven:pr-69'
+    workflowWorkerImageDefault: 'ploigos/ploigos-ci-agent-jenkins:v0.18.0',
+    workflowWorkerImageUnitTest: 'ploigos/ploigos-tool-maven:v0.18.0',
+    workflowWorkerImagePackage: 'ploigos/ploigos-tool-maven:v0.18.0',
+    workflowWorkerImageStaticCodeAnalysis: 'ploigos/ploigos-tool-sonar:v0.18.0',
+    workflowWorkerImagePushArtifacts: 'ploigos/ploigos-tool-maven:v0.18.0',
+    workflowWorkerImageContainerOperations: 'ploigos/ploigos-tool-containers:v0.18.0',
+    workflowWorkerImageContainerImageStaticVulnerabilityScan: 'ploigos/ploigos-tool-openscap:v0.18.0',
+    workflowWorkerImageDeploy: 'ploigos/ploigos-tool-argocd:v0.18.0',
+    workflowWorkerImageUAT: 'ploigos/ploigos-tool-maven:v0.18.0'
 )
