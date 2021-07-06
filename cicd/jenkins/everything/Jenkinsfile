@@ -1,5 +1,5 @@
 // Load the Ploigos Jenkins Library
-library identifier: 'ploigos-jenkins-library@v0.18.0',
+library identifier: 'ploigos-jenkins-library@main',
 retriever: modernSCM([
     $class: 'GitSCMSource',
     remote: 'https://github.com/ploigos/ploigos-jenkins-library.git'
@@ -23,5 +23,8 @@ ploigosWorkflowEverything(
     workflowWorkerImageDeploy: 'ploigos/ploigos-tool-argocd:v0.18.0',
     workflowWorkerImageValidateEnvironmentConfiguration: 'ploigos/ploigos-tool-config-lint:v0.18.0',
     workflowWorkerImageUAT: 'ploigos/ploigos-tool-maven:v0.18.0',
-    workflowWorkerAutomatedGovernance: 'ploigos/ploigos-tool-rekor:v0.18.0'
+    workflowWorkerImageAutomatedGovernance: 'ploigos/ploigos-tool-rekor:v0.18.0',
+
+    stepRunnerUpdateLibrary: true,
+    stepRunnerLibSourceUrl: 'git+https://github.com/ploigos/ploigos-step-runner.git@main'
 )

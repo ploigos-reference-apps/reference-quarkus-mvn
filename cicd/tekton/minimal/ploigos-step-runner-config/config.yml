@@ -10,12 +10,12 @@ step-runner-config:
 
     maven-servers:
       internal-mirror:
-        id: internal-server
-        username: tssc
+        id: internal-mirror
+        username: sa-ploigos-ref-apps
     maven-mirrors:
       internal-mirror:
         id: internal-mirror
-        url: http://artifactory.apps.tssc.rht-set.com/artifactory/release/
+        url: https://nexus.apps.tssc.rht-set.com/repository/maven-public/
         mirror-of: '*'
     container-registries:
         registry.redhat.io:
