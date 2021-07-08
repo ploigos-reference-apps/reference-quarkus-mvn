@@ -9,12 +9,12 @@ step-runner-config:
     service-name: fruit
 
     maven-servers:
-      internal-mirror:
-        id: internal-mirror
+      nexus.apps.tssc.rht.set.com:
+        id: nexus.apps.tssc.rht.set.com
         username: sa-ploigos-ref-apps
     maven-mirrors:
-      internal-mirror:
-        id: internal-mirror
+      nexus.apps.tssc.rht.set.com:
+        id: nexus.apps.tssc.rht.set.com
         url: https://nexus.apps.tssc.rht-set.com/repository/maven-public/
         mirror-of: '*'
     container-registries:
