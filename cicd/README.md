@@ -24,4 +24,5 @@ under the `cicd/` folder, or whatever folder structure makes sense to you, but t
 need to keep the multiple nesting of folders needed for our integration testing purposes.
 
 ## Operator Starter Project
-TODO
+
+The contents under [cicd/ploigos-software-factory-operator](./ploigos-software-factory-operator) are intended for use with the [Ploigos Software Factory Operator](https://github.com/ploigos/ploigos-software-factory-operator). For simplicity, only the `everything` workflow is supported, and all DSL assets have been consolidated to the same place. In this use case, the application-level configuration stored in [cicd/ploigos-software-factory-operator/ploigos-step-runner-config](./ploigos-software-factory-operator/ploigos-step-runner-config) is merged with platform-level configuration which is supplied by the operator and stored in a Kubernetes `Secret` (for sensitive data like passwords) and `ConfigMap` (for non-sensitive data like usernames and URLs).
