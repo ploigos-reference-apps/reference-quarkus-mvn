@@ -1,0 +1,4 @@
+---
+step-runner-config:
+  global-defaults:
+    application-name: ref-quarkus-mvn-gitlab-min
