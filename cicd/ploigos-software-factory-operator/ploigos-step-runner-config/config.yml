@@ -72,7 +72,7 @@ step-runner-config:
   - implementer: ConfiglintFromArgocd
   - implementer: Configlint
     config:
-      rules: cicd/jenkins/everything/ValidateEnv/
+      rules: cicd/ploigos-software-factory-operator/ValidateEnv/
 
   uat:
   - implementer: MavenSeleniumCucumber
