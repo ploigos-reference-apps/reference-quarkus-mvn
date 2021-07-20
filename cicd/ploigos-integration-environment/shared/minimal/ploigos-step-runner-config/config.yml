@@ -35,8 +35,6 @@ step-runner-config:
 
   create-container-image:
   - implementer: Buildah
-    config:
-      destination: localhost/tssc-reference-app-quarkus-rest-json
 
   push-container-image:
   - implementer: Skopeo
