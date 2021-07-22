@@ -63,8 +63,8 @@ step-runner-config:
   sign-container-image:
   - implementer: PodmanSign
     config:
-      container-image-signature-destination-url: http://artifactory.apps.tssc.rht-set.com/artifactory/container-image-signatures
-      container-image-signature-destination-username: tssc
+      container-image-signature-destination-url: https://nexus.apps.tssc.rht-set.com/repository/container-image-signatures/
+      container-image-signature-destination-username: sa-ploigos-ref-apps
 
   container-image-static-compliance-scan:
   - name: OpenSCAP - Compliance - SSG RHEL8
@@ -116,8 +116,8 @@ step-runner-config:
   - name: Generate and Push Results Report
     implementer: ResultArtifactsArchive
     config:
-      results-archive-destination-url: http://artifactory.apps.tssc.rht-set.com/artifactory/release-engineering-workflow-result-artifacts-archives
-      results-archive-destination-username: tssc
+      results-archive-destination-url: https://nexus.apps.tssc.rht-set.com/repository/release-engineering-workflow-result-artifacts-archives/
+      results-archive-destination-username: sa-ploigos-ref-apps
   - name: Sign Results Report
     implementer: RekorSignReport
     config:
@@ -127,8 +127,8 @@ step-runner-config:
   - name: Generate and Push Evidence
     implementer: GenerateEvidence
     config:
-      evidence-destination-url: http://artifactory.apps.tssc.rht-set.com/artifactory/release-engineering-workflow-evidence
-      evidence-destination-username: tssc
+      evidence-destination-url: https://nexus.apps.tssc.rht-set.com/repository/release-engineering-workflow-evidence/
+      evidence-destination-username: sa-ploigos-ref-apps
   - name: Sign Evidence
     implementer: RekorSignEvidence
     config:

@@ -106,5 +106,5 @@ step-runner-config:
   report:
   - implementer: ResultArtifactsArchive
     config:
-      results-archive-destination-url: http://artifactory.apps.tssc.rht-set.com/artifactory/release-engineering-workflow-result-artifacts-archives
-      results-archive-destination-username: tssc
+      results-archive-destination-url: https://nexus.apps.tssc.rht-set.com/repository/release-engineering-workflow-result-artifacts-archives/
+      results-archive-destination-username: sa-ploigos-ref-apps
