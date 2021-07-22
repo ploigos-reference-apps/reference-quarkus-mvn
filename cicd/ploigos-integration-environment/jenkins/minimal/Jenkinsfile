@@ -12,9 +12,12 @@ ploigosWorkflowMinimal(
     pgpKeysSecretName: 'pgp-keys-ploigos-workflow-ref-quarkus-mvn-jenkins-min-fruit',
     workflowServiceAccountName: 'ploigos-workflow-ref-quarkus-mvn-jenkins-min-fruit',
 
-    workflowWorkerImageDefault: 'ploigos/ploigos-base:v0.18.0',
-    workflowWorkerImageAgent: 'ploigos/ploigos-ci-agent-jenkins:v0.18.0',
-    workflowWorkerImagePackage: 'ploigos/ploigos-tool-maven:v0.18.0',
-    workflowWorkerImageContainerOperations: 'ploigos/ploigos-tool-containers:v0.18.0',
-    workflowWorkerImageDeploy: 'ploigos/ploigos-tool-argocd:v0.18.0'
+    workflowWorkerImageDefault: 'ploigos/ploigos-base:edge',
+    workflowWorkerImageAgent: 'ploigos/ploigos-ci-agent-jenkins:edge',
+    workflowWorkerImagePackage: 'ploigos/ploigos-tool-maven:edge',
+    workflowWorkerImageContainerOperations: 'ploigos/ploigos-tool-containers:edge',
+    workflowWorkerImageDeploy: 'ploigos/ploigos-tool-argocd:edge',
+
+    stepRunnerUpdateLibrary: true,
+    stepRunnerLibSourceUrl: 'git+https://github.com/ploigos/ploigos-step-runner.git@main'
 )
