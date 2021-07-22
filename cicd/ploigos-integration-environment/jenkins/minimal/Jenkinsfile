@@ -1,5 +1,5 @@
 // Load the Ploigos Jenkins Library
-library identifier: 'ploigos-jenkins-library@main',
+library identifier: 'ploigos-jenkins-library@v0.19.0',
 retriever: modernSCM([
     $class: 'GitSCMSource',
     remote: 'https://github.com/ploigos/ploigos-jenkins-library.git'
@@ -12,12 +12,12 @@ ploigosWorkflowMinimal(
     pgpKeysSecretName: 'pgp-keys-ploigos-workflow-ref-quarkus-mvn-jenkins-min-fruit',
     workflowServiceAccountName: 'ploigos-workflow-ref-quarkus-mvn-jenkins-min-fruit',
 
-    workflowWorkerImageDefault: 'ploigos/ploigos-base:edge',
-    workflowWorkerImageAgent: 'ploigos/ploigos-ci-agent-jenkins:edge',
-    workflowWorkerImagePackage: 'ploigos/ploigos-tool-maven:edge',
-    workflowWorkerImageContainerOperations: 'ploigos/ploigos-tool-containers:edge',
-    workflowWorkerImageDeploy: 'ploigos/ploigos-tool-argocd:edge',
+    workflowWorkerImageDefault: 'ploigos/ploigos-base:v0.19.0',
+    workflowWorkerImageAgent: 'ploigos/ploigos-ci-agent-jenkins:v0.19.0',
+    workflowWorkerImagePackage: 'ploigos/ploigos-tool-maven:v0.19.0',
+    workflowWorkerImageContainerOperations: 'ploigos/ploigos-tool-containers:v0.19.0',
+    workflowWorkerImageDeploy: 'ploigos/ploigos-tool-argocd:v0.19.0',
 
-    stepRunnerUpdateLibrary: true,
-    stepRunnerLibSourceUrl: 'git+https://github.com/ploigos/ploigos-step-runner.git@main'
+    stepRunnerUpdateLibrary: false,
+    stepRunnerLibSourceUrl: 'git+https://github.com/ploigos/ploigos-step-runner.git@v0.19.0'
 )
