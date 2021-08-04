@@ -1,5 +1,5 @@
 // Load the Ploigos Jenkins Library
-library identifier: 'ploigos-jenkins-library@v0.19.1',
+library identifier: 'ploigos-jenkins-library@main',
 retriever: modernSCM([
     $class: 'GitSCMSource',
     remote: 'https://github.com/ploigos/ploigos-jenkins-library.git'
@@ -12,21 +12,21 @@ ploigosWorkflowEverything(
     pgpKeysSecretName: 'pgp-keys-ploigos-workflow-ref-quarkus-mvn-jenkins-eve-fruit',
     workflowServiceAccountName: 'ploigos-workflow-ref-quarkus-mvn-jenkins-eve-fruit',
 
-    workflowWorkerImageDefault: 'ploigos/ploigos-base:v0.19.1',
-    workflowWorkerImageAgent: 'ploigos/ploigos-ci-agent-jenkins:v0.19.1',
-    workflowWorkerImageUnitTest: 'ploigos/ploigos-tool-maven:v0.19.1',
-    workflowWorkerImagePackage: 'ploigos/ploigos-tool-maven:v0.19.1',
-    workflowWorkerImageStaticCodeAnalysis: 'ploigos/ploigos-tool-sonar:v0.19.1',
-    workflowWorkerImagePushArtifacts: 'ploigos/ploigos-tool-maven:v0.19.1',
-    workflowWorkerImageContainerOperations: 'ploigos/ploigos-tool-containers:v0.19.1',
-    workflowWorkerImageContainerImageStaticComplianceScan: 'ploigos/ploigos-tool-openscap:v0.19.1',
-    workflowWorkerImageContainerImageStaticVulnerabilityScan: 'ploigos/ploigos-tool-openscap:v0.19.1',
-    workflowWorkerImageDeploy: 'ploigos/ploigos-tool-argocd:v0.19.1',
-    workflowWorkerImageValidateEnvironmentConfiguration: 'ploigos/ploigos-tool-config-lint:v0.19.1',
-    workflowWorkerImageUAT: 'ploigos/ploigos-tool-maven:v0.19.1',
-    workflowWorkerImageAutomatedGovernance: 'ploigos/ploigos-tool-autogov:v0.19.1',
+    workflowWorkerImageDefault: 'ploigos/ploigos-base:edge',
+    workflowWorkerImageAgent: 'ploigos/ploigos-ci-agent-jenkins:edge',
+    workflowWorkerImageUnitTest: 'ploigos/ploigos-tool-maven:edge',
+    workflowWorkerImagePackage: 'ploigos/ploigos-tool-maven:edge',
+    workflowWorkerImageStaticCodeAnalysis: 'ploigos/ploigos-tool-sonar:edge',
+    workflowWorkerImagePushArtifacts: 'ploigos/ploigos-tool-maven:edge',
+    workflowWorkerImageContainerOperations: 'ploigos/ploigos-tool-containers:edge',
+    workflowWorkerImageContainerImageStaticComplianceScan: 'ploigos/ploigos-tool-openscap:edge',
+    workflowWorkerImageContainerImageStaticVulnerabilityScan: 'ploigos/ploigos-tool-openscap:edge',
+    workflowWorkerImageDeploy: 'ploigos/ploigos-tool-argocd:edge',
+    workflowWorkerImageValidateEnvironmentConfiguration: 'ploigos/ploigos-tool-config-lint:edge',
+    workflowWorkerImageUAT: 'ploigos/ploigos-tool-maven:edge',
+    workflowWorkerImageAutomatedGovernance: 'ploigos/ploigos-tool-autogov:edge',
 
-    workflowWorkersImagePullPolicy: 'IfNotPresent',
-    stepRunnerUpdateLibrary: false,
-    stepRunnerLibSourceUrl: 'git+https://github.com/ploigos/ploigos-step-runner.git@v0.19.1'
+    workflowWorkersImagePullPolicy: 'Always',
+    stepRunnerUpdateLibrary: true,
+    stepRunnerLibSourceUrl: 'git+https://github.com/ploigos/ploigos-step-runner.git@main'
 )

@@ -33,10 +33,10 @@ step-runner-config:
       git-username: sa-ploigos-ref-apps
 
   unit-test:
-  - implementer: Maven
+  - implementer: MavenTest
 
   package:
-  - implementer: Maven
+  - implementer: MavenPackage
 
   static-code-analysis:
   - implementer: SonarQube
@@ -45,15 +45,13 @@ step-runner-config:
       username: reference-apps-sa
 
   push-artifacts:
-  - implementer: Maven
+  - implementer: MavenDeploy
     config:
       maven-push-artifact-repo-id: nexus.apps.tssc.rht.set.com
       maven-push-artifact-repo-url: https://nexus.apps.tssc.rht-set.com/repository/reference-apps/
 
   create-container-image:
   - implementer: Buildah
-    config:
-      destination: localhost/tssc-reference-app-quarkus-rest-json
 
   push-container-image:
   - implementer: Skopeo
