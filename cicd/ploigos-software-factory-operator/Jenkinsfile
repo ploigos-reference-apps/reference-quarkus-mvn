@@ -25,7 +25,5 @@ ploigosWorkflowEverything(
     workflowWorkerImageUAT: 'quay.io/ploigos/ploigos-tool-maven:v0.18.0',
     workflowWorkerAutomatedGovernance: 'quay.io/ploigos/ploigos-tool-rekor:v0.18.0',
 
-    separatePlatformConfig: true,
-    stepRunnerLibSourceUrl: "git+https://github.com/ploigos/ploigos-step-runner.git@main",
-    stepRunnerUpdateLibrary: true
+    separatePlatformConfig: true
 )
