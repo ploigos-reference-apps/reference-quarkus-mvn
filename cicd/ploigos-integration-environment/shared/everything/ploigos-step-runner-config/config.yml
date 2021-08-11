@@ -106,9 +106,14 @@ step-runner-config:
       rules: cicd/ploigos-integration-environment/shared/everything/ValidateEnv/
 
   uat:
-  - implementer: MavenSeleniumCucumber
+  - implementer: MavenIntegrationTest
     config:
-      selenium-hub-url: http://67.207.93.102:4444
+      target-host-url-maven-argument-name: 'target.base.url'
+      maven-additional-arguments:
+       - -Dselenium.hub.url=http://67.207.93.102:4444
+      additional-artifacts-dirs:
+      - name: cucumber-reports
+        path: 'target/cucumber-reports'
 
   report:
   - name: Generate and Push Results Report

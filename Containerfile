@@ -1,5 +1,5 @@
 #NOTE: maybe replace this image with a TSSC openjdk image if such a thing ever needs to exist
-FROM registry.redhat.io/ubi8/openjdk-8
+FROM registry.redhat.io/ubi8/openjdk-11
 
 USER 0
 

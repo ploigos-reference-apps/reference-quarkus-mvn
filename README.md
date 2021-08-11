@@ -14,3 +14,5 @@ Configured to run the following workflows:
 ## Source
 This is a copy/paste/fork of [rest-json-quickstart](https://github.com/quarkusio/quarkus-quickstarts/tree/master/rest-json-quickstart)
 maintained specifically do integration testing for [Ploigos](https://github.com/ploigos).
+
+It has also been updated to use the latest Quarkus and Java 11.
