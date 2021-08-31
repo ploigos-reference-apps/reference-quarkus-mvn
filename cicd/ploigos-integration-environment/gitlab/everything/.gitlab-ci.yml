@@ -1,2 +1,26 @@
 ---
-# TODO
+variables:
+  pgpKeysSecretName: 'pgp-keys-ploigos-workflow-ref-quarkus-mvn-gitlab-eve-fruit'
+  workflowServiceAccountName: 'ploigos-workflow-ref-quarkus-mvn-gitlab-eve-fruit'
+
+  # 'nightly' | 'latest' | 'edge' | 'v0.20.0'
+  workflowWorkerImageVersionDefault: 'v0.20.0'
+
+  # Workflow images; override in-line if a specific version is needed
+  workflowWorkerImageDefault: 'ploigos/ploigos-ci-agent-jenkins:$workflowWorkerImageVersionDefault'
+  workflowWorkerImageUnitTest: 'ploigos/ploigos-tool-maven:$workflowWorkerImageVersionDefault'
+  workflowWorkerImagePackage: 'ploigos/ploigos-tool-maven:$workflowWorkerImageVersionDefault'
+  workflowWorkerImageStaticCodeAnalysis: 'ploigos/ploigos-tool-sonar:$workflowWorkerImageVersionDefault'
+  workflowWorkerImagePushArtifacts: 'ploigos/ploigos-tool-maven:$workflowWorkerImageVersionDefault'
+  workflowWorkerImageContainerOperations: 'ploigos/ploigos-tool-containers:$workflowWorkerImageVersionDefault'
+  workflowWorkerImageContainerImageStaticComplianceScan: 'ploigos/ploigos-tool-openscap:$workflowWorkerImageVersionDefault'
+  workflowWorkerImageContainerImageStaticVulnerabilityScan: 'ploigos/ploigos-tool-openscap:$workflowWorkerImageVersionDefault'
+  workflowWorkerImageDeploy: 'ploigos/ploigos-tool-argocd:$workflowWorkerImageVersionDefault'
+  workflowWorkerImageValidateEnvironmentConfiguration: 'ploigos/ploigos-tool-config-lint:$workflowWorkerImageVersionDefault'
+  workflowWorkerImageUAT: 'ploigos/ploigos-tool-maven:$workflowWorkerImageVersionDefault'
+  workflowWorkerImageAutomatedGovernance: 'ploigos/ploigos-tool-autogov:$workflowWorkerImageVersionDefault'
+
+  stepRunnerConfigDir: 'cicd/ploigos-step-runner-config/'
+
+include:
+  - remote: 'https://gitlab.apps.tssc.rht-set.com/ploigos/ploigos-gitlab-library/-/raw/main/ploigosWorkflowEverything.yml'

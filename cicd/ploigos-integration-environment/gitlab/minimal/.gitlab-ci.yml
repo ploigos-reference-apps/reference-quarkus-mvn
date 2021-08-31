@@ -1,2 +1,18 @@
 ---
-# TODO
+variables:
+  pgpKeysSecretName: 'pgp-keys-ploigos-workflow-ref-quarkus-mvn-gitlab-std-fruit'
+  workflowServiceAccountName: 'ploigos-workflow-ref-quarkus-mvn-gitlab-std-fruit'
+
+  # 'nightly' | 'latest' | 'edge' | 'v0.20.0'
+  workflowWorkerImageVersionDefault: 'v0.20.0'
+
+  # Workflow images; override in-line if a specific version is needed
+  workflowWorkerImageDefault: 'ploigos/ploigos-base:$workflowWorkerImageVersionDefault'
+  workflowWorkerImagePackage: 'ploigos/ploigos-tool-maven:$workflowWorkerImageVersionDefault'
+  workflowWorkerImageContainerOperations: 'ploigos/ploigos-tool-containers:$workflowWorkerImageVersionDefault'
+  workflowWorkerImageDeploy: 'ploigos/ploigos-tool-argocd:$workflowWorkerImageVersionDefault'
+
+  stepRunnerConfigDir: 'cicd/ploigos-step-runner-config/'
+
+include:
+  - remote: 'https://gitlab.apps.tssc.rht-set.com/ploigos/ploigos-gitlab-library/-/raw/main/ploigosWorkflowMinimal.yml'
