@@ -2,3 +2,8 @@
 step-runner-config:
   global-defaults:
     application-name: ref-quarkus-mvn-gitlab-typ
+
+  deploy:
+  - implementer: ArgoCD
+    config:
+      deployment-config-repo: http://gitea.tssc.rht-set.com/ploigos-reference-applications/reference-quarkus-mvn-cloud-resources_gitlab_workflow-typical.git
