@@ -9,7 +9,12 @@ Configured to run the following workflows:
   * typical
   * everything
 * Tekton
-  * TODO
+  * minimal
+  * typical
+  * everything
+
+Tested with:
+* Ploigos v0.21.0
 
 ## Source
 This is a copy/paste/fork of [rest-json-quickstart](https://github.com/quarkusio/quarkus-quickstarts/tree/master/rest-json-quickstart)
