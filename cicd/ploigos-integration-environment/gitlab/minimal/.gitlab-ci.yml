@@ -1,5 +1,7 @@
 ---
 variables:
+  stepRunnerConfigDir: 'cicd/ploigos-integration-environment/gitlab/minimal/ploigos-step-runner-config/'
+
   pgpKeysSecretName: 'pgp-keys-ploigos-workflow-ref-quarkus-mvn-gitlab-std-fruit'
   workflowServiceAccountName: 'ploigos-workflow-ref-quarkus-mvn-gitlab-std-fruit'
 
@@ -12,7 +14,5 @@ variables:
   workflowWorkerImageContainerOperations: 'ploigos/ploigos-tool-containers:$workflowWorkerImageVersionDefault'
   workflowWorkerImageDeploy: 'ploigos/ploigos-tool-argocd:$workflowWorkerImageVersionDefault'
 
-  stepRunnerConfigDir: 'cicd/ploigos-step-runner-config/'
-
 include:
-  - remote: 'https://gitlab.apps.tssc.rht-set.com/ploigos/ploigos-gitlab-library/-/raw/main/ploigosWorkflowMinimal.yml'
+  - remote: 'https://raw.githubusercontent.com/ploigos/ploigos-gitlab-library/main/ploigosWorkflowMinimal.yml'
