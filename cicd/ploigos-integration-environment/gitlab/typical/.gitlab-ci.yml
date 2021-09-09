@@ -5,8 +5,8 @@ variables:
   pgpKeysSecretName: 'pgp-keys-ploigos-workflow-ref-quarkus-mvn-gitlab-typ-fruit'
   workflowServiceAccountName: 'ploigos-workflow-ref-quarkus-mvn-gitlab-typ-fruit'
 
-  # 'nightly' | 'latest' | 'edge' | 'v0.20.0'
-  workflowWorkerImageVersionDefault: 'v0.20.0'
+  # 'nightly' | 'latest' | 'edge' | 'v0.20'
+  workflowWorkerImageVersionDefault: 'v0.21'
 
   # Workflow images; override in-line if a specific version is needed
   workflowWorkerImageDefault: 'ploigos/ploigos-base:$workflowWorkerImageVersionDefault'
