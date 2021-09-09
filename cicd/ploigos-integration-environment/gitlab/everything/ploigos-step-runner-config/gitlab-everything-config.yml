@@ -7,3 +7,4 @@ step-runner-config:
   - implementer: ArgoCD
     config:
       deployment-config-repo: http://gitea.tssc.rht-set.com/ploigos-reference-applications/reference-quarkus-mvn-cloud-resources_gitlab_workflow-everything.git
+      git-username: sa-ploigos-ref-apps

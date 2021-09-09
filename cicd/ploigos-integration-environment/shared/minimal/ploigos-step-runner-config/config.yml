@@ -46,8 +46,7 @@ step-runner-config:
       argocd-skip-tls: True
       deployment-config-helm-chart-path: charts/reference-quarkus-mvn-deploy
       deployment-config-helm-chart-values-file-image-tag-yq-path: 'image.tag'
-      git-username: sa-ploigos-ref-apps
-      git-email: 'napsspo+tssc@redhat.com'
+      git-email: 'ploigos+it@redhat.com'
       argocd-sync-timeout-seconds: 130
     environment-config:
       DEV:
