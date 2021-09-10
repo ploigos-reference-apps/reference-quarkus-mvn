@@ -67,7 +67,8 @@ step-runner-config:
       rules: cicd/ploigos-software-factory-operator/ValidateEnv/
 
   uat:
-  - implementer: MavenSeleniumCucumber
-
-  report:
-  - implementer: ResultArtifactsArchive
+  - implementer: MavenIntegrationTest
+    config:
+      additional-artifacts-dirs:
+      - name: cucumber-reports
+        path: 'target/cucumber-reports'
