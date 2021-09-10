@@ -1,41 +1,9 @@
 ---
 step-runner-config:
-  config-decryptors:
-  - implementer: SOPS
-
   global-defaults:
     organization: platform
     application-name: ref-quarkus-mvn
     service-name: fruit
-
-  generate-metadata:
-  - implementer: Maven
-  - implementer: Git
-  - implementer: SemanticVersion
-
-  tag-source:
-  - implementer: Git
-
-  unit-test:
-  - implementer: Maven
-
-  package:
-  - implementer: Maven
-
-  static-code-analysis:
-  - implementer: SonarQube
-
-  push-artifacts:
-  - implementer: Maven
-
-  create-container-image:
-  - implementer: Buildah
-
-  push-container-image:
-  - implementer: Skopeo
-
-  sign-container-image:
-  - implementer: PodmanSign
 
   container-image-static-vulnerability-scan:
   - name: OpenSCAP - Vulnerability - DataStream
@@ -48,8 +16,8 @@ step-runner-config:
   deploy:
   - implementer: ArgoCD
     config:
-      deployment-config-helm-chart-path: charts/reference-quarkus-mvn-deploy
       deployment-config-repo: http://gitea:3000/platform/reference-quarkus-mvn-cloud-resources_workflow-typical.git
+      deployment-config-helm-chart-path: charts/reference-quarkus-mvn-deploy
       deployment-config-helm-chart-values-file-image-tag-yq-path: 'image.tag'
       environment-config:
         DEV:
@@ -61,13 +29,6 @@ step-runner-config:
       force-push-tags: true
 
   validate-environment-configuration:
-  - implementer: ConfiglintFromArgocd
   - implementer: Configlint
     config:
       rules: cicd/ploigos-software-factory-operator/ValidateEnv/
-
-  uat:
-  - implementer: MavenSeleniumCucumber
-
-  report:
-  - implementer: ResultArtifactsArchive
