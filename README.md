@@ -12,6 +12,10 @@ Configured to run the following workflows:
   * minimal
   * typical
   * everything
+* GitLab
+  * minimal
+  * typical
+  * everything
 
 Tested with:
 * Ploigos v0.21.0
