@@ -20,4 +20,4 @@ variables:
   workflowWorkerImageUAT: 'ploigos/ploigos-tool-maven:$workflowWorkerImageVersionDefault'
 
 include:
-  - remote: 'https://raw.githubusercontent.com/ploigos/ploigos-gitlab-library/main/ploigosWorkflowTypicalyml'
+  - remote: 'https://raw.githubusercontent.com/ploigos/ploigos-gitlab-library/main/ploigosWorkflowTypical.yml'
