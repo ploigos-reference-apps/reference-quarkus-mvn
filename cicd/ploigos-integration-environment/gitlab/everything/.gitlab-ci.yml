@@ -6,7 +6,7 @@ variables:
   workflowServiceAccountName: 'ploigos-workflow-ref-quarkus-mvn-gitlab-eve-fruit'
 
   # 'nightly' | 'latest' | 'edge' | 'v0.20'
-  workflowWorkerImageVersionDefault: 'v0.21'
+  workflowWorkerImageVersionDefault: 'pr-95'
 
   # Workflow images; override in-line if a specific version is needed
   workflowWorkerImageDefault: 'ploigos/ploigos-ci-agent-jenkins:$workflowWorkerImageVersionDefault'
