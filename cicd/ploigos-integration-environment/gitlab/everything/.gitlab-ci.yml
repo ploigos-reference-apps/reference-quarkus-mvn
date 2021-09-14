@@ -6,7 +6,7 @@ variables:
   workflowServiceAccountName: 'ploigos-workflow-ref-quarkus-mvn-gitlab-eve-fruit'
 
   # 'nightly' | 'latest' | 'edge' | 'v0.20'
-  workflowWorkerImageVersionDefault: 'v0.21'
+  workflowWorkerImageVersionDefault: 'pr-95'
 
   # Workflow images; override in-line if a specific version is needed
   workflowWorkerImageDefault: 'ploigos/ploigos-ci-agent-jenkins:$workflowWorkerImageVersionDefault'
@@ -23,4 +23,4 @@ variables:
   workflowWorkerImageAutomatedGovernance: 'ploigos/ploigos-tool-autogov:$workflowWorkerImageVersionDefault'
 
 include:
-  - remote: 'https://raw.githubusercontent.com/ploigos/ploigos-gitlab-library/main/ploigosWorkflowEverything.yml'
+  - remote: 'https://raw.githubusercontent.com/ploigos/ploigos-gitlab-library/v0.22.0/ploigosWorkflowEverything.yml'
