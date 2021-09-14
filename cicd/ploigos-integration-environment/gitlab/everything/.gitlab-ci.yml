@@ -23,4 +23,4 @@ variables:
   workflowWorkerImageAutomatedGovernance: 'ploigos/ploigos-tool-autogov:$workflowWorkerImageVersionDefault'
 
 include:
-  - remote: 'https://raw.githubusercontent.com/ploigos/ploigos-gitlab-library/main/ploigosWorkflowEverything.yml'
+  - remote: 'https://raw.githubusercontent.com/ploigos/ploigos-gitlab-library/feature/everything-workflow-fix-1/ploigosWorkflowEverything.yml'
