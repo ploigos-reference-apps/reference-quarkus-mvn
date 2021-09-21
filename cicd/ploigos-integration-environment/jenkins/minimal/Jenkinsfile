@@ -16,5 +16,7 @@ ploigosWorkflowMinimal(
     workflowWorkerImageAgent: 'ploigos/ploigos-ci-agent-jenkins:v0.22.0',
     workflowWorkerImagePackage: 'ploigos/ploigos-tool-maven:v0.22.0',
     workflowWorkerImageContainerOperations: 'ploigos/ploigos-tool-containers:v0.22.0',
-    workflowWorkerImageDeploy: 'ploigos/ploigos-tool-argocd:v0.22.0'
+    workflowWorkerImageDeploy: 'ploigos/ploigos-tool-argocd:v0.22.0',
+    stepRunnerUpdateLibrary: true,
+    stepRunnerLibSourceUrl: 'git+https://github.com/ploigos/ploigos-step-runner.git@feature/argocd-generic',
 )
