@@ -21,5 +21,8 @@ ploigosWorkflowTypical(
     workflowWorkerImageContainerOperations: 'ploigos/ploigos-tool-containers:v0.22.0',
     workflowWorkerImageContainerImageStaticVulnerabilityScan: 'ploigos/ploigos-tool-openscap:v0.22.0',
     workflowWorkerImageDeploy: 'ploigos/ploigos-tool-argocd:v0.22.0',
-    workflowWorkerImageUAT: 'ploigos/ploigos-tool-maven:v0.22.0'
+    workflowWorkerImageUAT: 'ploigos/ploigos-tool-maven:v0.22.0',
+
+    stepRunnerUpdateLibrary: true,
+    stepRunnerLibSourceUrl: 'git+https://github.com/itewk/ploigos-step-runner.git@feature/container-image-digests'
 )
