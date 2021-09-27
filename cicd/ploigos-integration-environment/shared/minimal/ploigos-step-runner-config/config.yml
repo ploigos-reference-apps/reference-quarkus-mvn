@@ -36,7 +36,7 @@ step-runner-config:
   push-container-image:
   - implementer: Skopeo
     config:
-      destination-url: registry-internal-nexus.apps.tssc.rht-set.com
+      container-image-push-registry: registry-internal-nexus.apps.tssc.rht-set.com
 
   deploy:
   - implementer: ArgoCD
