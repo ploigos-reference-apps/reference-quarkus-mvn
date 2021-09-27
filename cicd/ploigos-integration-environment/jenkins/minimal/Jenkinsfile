@@ -19,5 +19,5 @@ ploigosWorkflowMinimal(
     workflowWorkerImageDeploy: 'ploigos/ploigos-tool-argocd:v0.22.0',
 
     stepRunnerUpdateLibrary: true,
-    stepRunnerLibSourceUrl: 'git+https://github.com/itewk/ploigos-step-runner.git@feature/pelorus'
+    stepRunnerLibSourceUrl: 'git+https://github.com/itewk/ploigos-step-runner.git@feature/container-image-digests'
 )
