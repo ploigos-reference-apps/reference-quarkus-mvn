@@ -1,6 +1,6 @@
 ---
 variables:
-  stepRunnerConfigDir: 'cicd/ploigos-software-factory-operator/ploigos-step-runner-config/  /opt/platform-config'
+  stepRunnerConfigDir: 'cicd/ploigos-software-factory-operator/gitlab/ploigos-step-runner-config  /opt/platform-config'
 
   pgpKeysSecretName: 'ploigos-gpg-key'
   workflowServiceAccountName: 'gitlab-runner-sa'
