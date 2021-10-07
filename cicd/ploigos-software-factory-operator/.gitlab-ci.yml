@@ -1,0 +1,23 @@
+---
+variables:
+  stepRunnerConfigDir: 'cicd/ploigos-software-factory-operator/ploigos-step-runner-config/  /opt/platform-config'
+
+  pgpKeysSecretName: 'ploigos-gpg-key'
+  workflowServiceAccountName: 'gitlab-runner-sa'
+
+  # 'nightly' | 'latest' | 'edge' | 'v0.20'
+  workflowWorkerImageVersionDefault: 'pr-95'
+
+  # Workflow images; override in-line if a specific version is needed
+  workflowWorkerImageDefault: 'quay.io/ploigos/ploigos-base:$workflowWorkerImageVersionDefault'
+  workflowWorkerImageUnitTest: 'quay.io/ploigos/ploigos-tool-maven:$workflowWorkerImageVersionDefault'
+  workflowWorkerImagePackage: 'quay.io/ploigos/ploigos-tool-maven:$workflowWorkerImageVersionDefault'
+  workflowWorkerImageStaticCodeAnalysis: 'quay.io/ploigos/ploigos-tool-sonar:$workflowWorkerImageVersionDefault'
+  workflowWorkerImagePushArtifacts: 'quay.io/ploigos/ploigos-tool-maven:$workflowWorkerImageVersionDefault'
+  workflowWorkerImageContainerOperations: 'quay.io/ploigos/ploigos-tool-containers:$workflowWorkerImageVersionDefault'
+  workflowWorkerImageContainerImageStaticVulnerabilityScan: 'quay.io/ploigos/ploigos-tool-openscap:$workflowWorkerImageVersionDefault'
+  workflowWorkerImageDeploy: 'quay.io/ploigos/ploigos-tool-argocd:$workflowWorkerImageVersionDefault'
+  workflowWorkerImageUAT: 'quay.io/ploigos/ploigos-tool-maven:$workflowWorkerImageVersionDefault'
+
+include:
+  - remote: 'https://raw.githubusercontent.com/ploigos/ploigos-gitlab-library/v0.22.0/ploigosWorkflowTypical.yml'
