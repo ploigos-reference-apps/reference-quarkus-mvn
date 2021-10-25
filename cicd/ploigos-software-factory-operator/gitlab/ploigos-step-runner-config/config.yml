@@ -1,0 +1,37 @@
+---
+step-runner-config:
+  global-defaults:
+    organization: platform
+    application-name: ref-quarkus-mvn
+    service-name: fruit
+  container-image-static-vulnerability-scan:
+  - name: OpenSCAP - Vulnerability - DataStream
+    implementer: OpenSCAP
+    config:
+      oscap-input-definitions-uri: https://www.redhat.com/security/data/metrics/ds/v2/RHEL8/rhel-8.ds.xml.bz2
+      oscap-tailoring-uri: https://raw.githubusercontent.com/ploigos/ploigos-example-oscap-content/main/xccdf_com.ploigos_profile_default_cve_ploigos_reference_apps-tailoring.xml
+      oscap-profile: xccdf_com.ploigos_profile_default_cve_ploigos_reference_apps
+  deploy:
+  - implementer: ArgoCD
+    config:
+      deployment-config-repo: http://gitlab-webservice-default.gitlab-system.svc.cluster.local:8181/platform/reference-quarkus-mvn-cloud-resources_gitlab_workflow-typical.git
+      deployment-config-helm-chart-path: charts/reference-quarkus-mvn-deploy
+      deployment-config-helm-chart-values-file-image-tag-yq-path: 'image.tag'
+      environment-config:
+        DEV:
+          deployment-config-helm-chart-environment-values-file: values-DEV.yaml
+        TEST:
+          deployment-config-helm-chart-environment-values-file: values-TEST.yaml
+        PROD:
+          deployment-config-helm-chart-environment-values-file: values-PROD.yaml
+      force-push-tags: true
+  validate-environment-configuration:
+  - implementer: Configlint
+    config:
+      rules: cicd/ploigos-software-factory-operator/ValidateEnv/
+  uat:
+  - implementer: MavenIntegrationTest
+    config:
+      additional-artifacts-dirs:
+      - name: cucumber-reports
+        path: 'target/cucumber-reports'
