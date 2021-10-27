@@ -9,6 +9,9 @@ retriever: modernSCM([
 ploigosWorkflowMinimal(
     stepRunnerConfigDir: 'cicd/ploigos-integration-environment/jenkins/minimal/ploigos-step-runner-config/',
 
+    stepRunnerUpdateLibrary: 'true',
+    stepRunnerLibSourceUrl: 'git+https://github.com/ploigos/ploigos-step-runner.git@main',
+
     pgpKeysSecretName: 'pgp-keys-ploigos-workflow-ref-quarkus-mvn-jenkins-min-fruit',
     workflowServiceAccountName: 'ploigos-workflow-ref-quarkus-mvn-jenkins-min-fruit',
 
