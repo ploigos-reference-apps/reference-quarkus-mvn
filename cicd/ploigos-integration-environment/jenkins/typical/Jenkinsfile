@@ -15,7 +15,7 @@ ploigosWorkflowTypical(
     stepRunnerUpdateLibrary: 'true',
     stepRunnerLibSourceUrl: 'git+https://github.com/ploigos/ploigos-step-runner.git@bug/utils/xml',
 
-    workflowWorkerImageDefault: 'ploigos/ploigos-base:v0.22.0',
+    workflowWorkerImageDefault: 'ploigos/ploigos-tool-maven:v0.22.0',
     workflowWorkerImageAgent: 'ploigos/ploigos-ci-agent-jenkins:v0.22.0',
     workflowWorkerImageUnitTest: 'ploigos/ploigos-tool-maven:v0.22.0',
     workflowWorkerImagePackage: 'ploigos/ploigos-tool-maven:v0.22.0',
