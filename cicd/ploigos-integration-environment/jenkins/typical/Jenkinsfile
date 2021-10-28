@@ -12,7 +12,7 @@ ploigosWorkflowTypical(
     pgpKeysSecretName: 'pgp-keys-ploigos-workflow-ref-quarkus-mvn-jenkins-typ-fruit',
     workflowServiceAccountName: 'ploigos-workflow-ref-quarkus-mvn-jenkins-typ-fruit',
 
-    workflowWorkerImageDefault: 'ploigos/ploigos-base:v0.22.0',
+    workflowWorkerImageDefault: 'ploigos/ploigos-tool-maven:v0.22.0',
     workflowWorkerImageAgent: 'ploigos/ploigos-ci-agent-jenkins:v0.22.0',
     workflowWorkerImageUnitTest: 'ploigos/ploigos-tool-maven:v0.22.0',
     workflowWorkerImagePackage: 'ploigos/ploigos-tool-maven:v0.22.0',
@@ -21,5 +21,8 @@ ploigosWorkflowTypical(
     workflowWorkerImageContainerOperations: 'ploigos/ploigos-tool-containers:v0.22.0',
     workflowWorkerImageContainerImageStaticVulnerabilityScan: 'ploigos/ploigos-tool-openscap:v0.22.0',
     workflowWorkerImageDeploy: 'ploigos/ploigos-tool-argocd:v0.22.0',
-    workflowWorkerImageUAT: 'ploigos/ploigos-tool-maven:v0.22.0'
+    workflowWorkerImageUAT: 'ploigos/ploigos-tool-maven:v0.22.0',
+
+    stepRunnerUpdateLibrary: true,
+    stepRunnerLibSourceUrl: 'git+https://github.com/itewk/ploigos-step-runner.git@feature/sonar-branch'
 )
