@@ -3,8 +3,13 @@ step-runner-config:
   global-defaults:
     application-name: ref-quarkus-mvn-gitlab-typ
 
+  generate-metadata:
+  - implementer: Maven
+  - implementer: Git
+  - implementer: SemanticVersion
+
   deploy:
-  - implementer: ArgoCD
+  - implementer: ArgoCDDeploy
     config:
       deployment-config-repo: http://gitlab.apps.tssc.rht-set.com/ploigos-reference-applications/typical/reference-quarkus-mvn-cloud-resources_gitlab_workflow-typical.git
       git-username: gitlab-ci
