@@ -3,8 +3,14 @@ step-runner-config:
   global-defaults:
     application-name: ref-quarkus-mvn-jenkins-typ
 
+  generate-metadata:
+  - implementer: Jenkins
+  - implementer: Maven
+  - implementer: Git
+  - implementer: SemanticVersion
+
   deploy:
-  - implementer: ArgoCD
+  - implementer: ArgoCDDeploy
     config:
       deployment-config-repo: http://gitea.tssc.rht-set.com/ploigos-reference-applications/reference-quarkus-mvn-cloud-resources_jenkins_workflow-typical.git
       git-username: sa-ploigos-ref-apps
