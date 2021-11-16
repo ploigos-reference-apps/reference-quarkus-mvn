@@ -3,6 +3,12 @@ step-runner-config:
   global-defaults:
     application-name: ref-quarkus-mvn-jenkins-min
 
+  generate-metadata:
+  - implementer: Jenkins
+  - implementer: Maven
+  - implementer: Git
+  - implementer: SemanticVersion
+
   deploy:
   - implementer: ArgoCD
     config:

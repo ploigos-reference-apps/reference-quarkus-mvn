@@ -3,6 +3,11 @@ step-runner-config:
   global-defaults:
     application-name: ref-quarkus-mvn-gitlab-min
 
+  generate-metadata:
+  - implementer: Maven
+  - implementer: Git
+  - implementer: SemanticVersion
+
   deploy:
   - implementer: ArgoCD
     config:
