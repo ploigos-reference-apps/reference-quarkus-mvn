@@ -22,11 +22,6 @@ step-runner-config:
         registry-internal-nexus.apps.tssc.rht-set.com:
             username: sa-ploigos-ref-apps
 
-  generate-metadata:
-  - implementer: Maven
-  - implementer: Git
-  - implementer: SemanticVersion
-
   tag-source:
   - implementer: Git
     config:
@@ -81,7 +76,7 @@ step-runner-config:
       oscap-profile: xccdf_com.ploigos_profile_default_cve_ploigos_reference_quarkus_mvn
 
   deploy:
-  - implementer: ArgoCD
+  - implementer: ArgoCDDeploy
     config:
       argocd-api: argocd-server-argocd.apps.tssc.rht-set.com
       argocd-username: admin
