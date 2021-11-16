@@ -6,7 +6,8 @@ USER 0
 ##############################
 # vulenerability remediation #
 ##############################
-RUN microdnf update -y && \
+RUN echo "excludepkgs=filesystem" >> /etc/dnf/dnf.conf &&
+    microdnf update -y && \
     microdnf clean all
 
 # NOTE / WARNING / IMPORTANT:
