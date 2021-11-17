@@ -10,5 +10,8 @@ java11ServicePloigosWorkflowEverything(
     stepRunnerConfigDir: 'cicd/ploigos-integration-environment/jenkins/everything/ploigos-step-runner-config/',
 
     pgpKeysSecretName: 'pgp-keys-ploigos-workflow-ref-quarkus-mvn-jenkins-eve-fruit',
-    workflowServiceAccountName: 'ploigos-workflow-ref-quarkus-mvn-jenkins-eve-fruit'
+    workflowServiceAccountName: 'ploigos-workflow-ref-quarkus-mvn-jenkins-eve-fruit',
+
+    // TEMP TEST
+    platformConfigConfigMapName: 'ploigos-platform-config-ian-test1'
 )
