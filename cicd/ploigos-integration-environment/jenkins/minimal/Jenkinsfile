@@ -10,5 +10,9 @@ java11ServicePloigosWorkflowMinimal(
     stepRunnerConfigDir: 'cicd/ploigos-integration-environment/jenkins/minimal/ploigos-step-runner-config/',
 
     pgpKeysSecretName: 'pgp-keys-ploigos-workflow-ref-quarkus-mvn-jenkins-min-fruit',
-    workflowServiceAccountName: 'ploigos-workflow-ref-quarkus-mvn-jenkins-min-fruit'
+    workflowServiceAccountName: 'ploigos-workflow-ref-quarkus-mvn-jenkins-min-fruit',
+
+    // TEMP TEST
+    platformConfigConfigMapName: 'ploigos-platform-config-ian-test1',
+    platformConfigSecretName: 'ploigos-platform-config-secrets-ian-test1'
 )
