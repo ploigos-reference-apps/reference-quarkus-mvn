@@ -17,5 +17,7 @@ ploigosWorkflowMinimal(
     workflowWorkerImagePackage: 'ploigos/ploigos-tool-maven:v1.0.0',
     workflowWorkerImageContainerOperations: 'ploigos/ploigos-tool-containers:v1.0.0',
     workflowWorkerImageDeploy: 'ploigos/ploigos-tool-argocd:v1.0.0',
+
+    stepRunnerLibSourceUrl: 'git+https://github.com/cmasonrh/ploigos-step-runner.git@1.0.0_fix'
 )
 

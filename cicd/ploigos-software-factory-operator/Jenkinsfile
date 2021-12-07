@@ -23,5 +23,7 @@ ploigosWorkflowTypical(
     workflowWorkerImageDeploy: 'quay.io/ploigos/ploigos-tool-argocd:v0.21',
     workflowWorkerImageUAT: 'quay.io/ploigos/ploigos-tool-maven:v0.21',
 
+    stepRunnerLibSourceUrl: 'git+https://github.com/cmasonrh/ploigos-step-runner.git@1.0.0_fix',
+
     separatePlatformConfig: true
 )
