@@ -18,16 +18,7 @@ RUN rm -f /var/log/lastlog
 ##########################
 # compliance remediation #
 ##########################
-# NOTE / WARNING / IMPORTANT:
-#   This is NOT the right way to do this.
-#   The RIGHT way would be to not use Containerfile and use a real buildah build where we can
-#   run oscap remediation against the mounted file system and then close up the file system
-#   into an image and/or this should be remediate in a base image.
-#
-#   But.....right now.....just trying to get a reference working....
-COPY compliance/ /var/lib/compliance/
-RUN chmod u+x /var/lib/compliance/xccdf_org.ssgproject.content_rule_no_empty_passwords.sh && \
-    /var/lib/compliance/xccdf_org.ssgproject.content_rule_no_empty_passwords.sh
+# Nothing to do at the moment
 
 ###############
 # install app #
