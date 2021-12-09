@@ -12,9 +12,10 @@ ploigosWorkflowMinimal(
     pgpKeysSecretName: 'pgp-keys-ploigos-workflow-ref-quarkus-mvn-jenkins-min-fruit',
     workflowServiceAccountName: 'ploigos-workflow-ref-quarkus-mvn-jenkins-min-fruit',
 
-    workflowWorkerImageDefault: 'ploigos/ploigos-base:v0.22.0',
-    workflowWorkerImageAgent: 'ploigos/ploigos-ci-agent-jenkins:v0.22.0',
-    workflowWorkerImagePackage: 'ploigos/ploigos-tool-maven:v0.22.0',
-    workflowWorkerImageContainerOperations: 'ploigos/ploigos-tool-containers:v0.22.0',
-    workflowWorkerImageDeploy: 'ploigos/ploigos-tool-argocd:v0.22.0'
+    workflowWorkerImageDefault: 'ploigos/ploigos-tool-maven:v1.0.0',
+    workflowWorkerImageAgent: 'ploigos/ploigos-ci-agent-jenkins:v1.0.0',
+    workflowWorkerImagePackage: 'ploigos/ploigos-tool-maven:v1.0.0',
+    workflowWorkerImageContainerOperations: 'ploigos/ploigos-tool-containers:v1.0.0',
+    workflowWorkerImageDeploy: 'ploigos/ploigos-tool-argocd:v1.0.0',
 )
+
