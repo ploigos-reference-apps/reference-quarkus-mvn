@@ -6,12 +6,19 @@ USER 0
 ##############################
 # vulenerability remediation #
 ##############################
-RUN microdnf update -y && \
+# IMPORTANT: need to exclude filesystem due to https://bugzilla.redhat.com/show_bug.cgi?id=1708249#c31
+RUN printf "[main]\nexcludepkgs=filesystem" > /etc/dnf/dnf.conf && \
+    microdnf update -y && \
     microdnf clean all
 
 # NOTE / WARNING / IMPORTANT:
 #   work around for https://bugzilla.redhat.com/show_bug.cgi?id=1798685
 RUN rm -f /var/log/lastlog
+
+##########################
+# compliance remediation #
+##########################
+# Nothing to do at the moment
 
 ###############
 # install app #
