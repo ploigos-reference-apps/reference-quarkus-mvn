@@ -14,7 +14,7 @@ step-runner-config:
   deploy:
   - implementer: ArgoCD
     config:
-      deployment-config-repo: http://gitlab-webservice-default.gitlab-system.svc.cluster.local:8181/platform/reference-quarkus-mvn-cloud-resources_gitlab_workflow-typical.git
+      deployment-config-repo: http://gitlab-webservice-default.gitlab-system.svc.cluster.local:8181/platform/reference-quarkus-mvn-cloud-resources_workflow-typical.git
       deployment-config-helm-chart-path: charts/reference-quarkus-mvn-deploy
       deployment-config-helm-chart-values-file-image-tag-yq-path: 'image.tag'
       environment-config:
