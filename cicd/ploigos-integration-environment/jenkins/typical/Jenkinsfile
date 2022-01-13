@@ -23,7 +23,7 @@ ploigosWorkflowTypical(
     workflowWorkerImageContainerImageStaticVulnerabilityScan: 'ploigos/ploigos-tool-openscap:v1.0.0',
     workflowWorkerImageUAT: 'ploigos/ploigos-tool-maven:v1.0.0',
 
-    stepRunnerLibSourceUrl: 'git+https://github.com/cmasonrh/ploigos-step-runner.git@1.0.0_fix',
+    stepRunnerLibSourceUrl: 'git+https://github.com/cmasonrh/ploigos-step-runner.git@openscap_severity',
 
 )
 

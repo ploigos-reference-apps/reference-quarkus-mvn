@@ -25,6 +25,6 @@ ploigosWorkflowEverything(
     workflowWorkerImageValidateEnvironmentConfiguration: 'ploigos/ploigos-tool-config-lint:v1.0.0',
     workflowWorkerImageAutomatedGovernance: 'ploigos/ploigos-tool-autogov:v1.0.0',
 
-    stepRunnerLibSourceUrl: 'git+https://github.com/cmasonrh/ploigos-step-runner.git@1.0.0_fix',
+    stepRunnerLibSourceUrl: 'git+https://github.com/cmasonrh/ploigos-step-runner.git@openscap_severity',
 )
 
