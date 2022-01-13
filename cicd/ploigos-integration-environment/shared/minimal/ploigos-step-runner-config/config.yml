@@ -32,6 +32,9 @@ step-runner-config:
 
   create-container-image:
   - implementer: Buildah
+  - implementer: PelorusCommitTimestampMetric
+    config:
+      prometheus-pushgateway-url: https://pelorus-prometheus-pushgateway.apps.tssc.rht-set.com
 
   push-container-image:
   - implementer: Skopeo
