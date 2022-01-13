@@ -24,5 +24,8 @@ ploigosWorkflowEverything(
     workflowWorkerImageUAT: 'ploigos/ploigos-tool-maven:v1.0.0',
     workflowWorkerImageValidateEnvironmentConfiguration: 'ploigos/ploigos-tool-config-lint:v1.0.0',
     workflowWorkerImageAutomatedGovernance: 'ploigos/ploigos-tool-autogov:v1.0.0',
+
+    stepRunnerUpdateLibrary: true,
+    stepRunnerLibSourceUrl: 'git+https://github.com/itewk/ploigos-step-runner.git@feature/pelorus'
 )
 
