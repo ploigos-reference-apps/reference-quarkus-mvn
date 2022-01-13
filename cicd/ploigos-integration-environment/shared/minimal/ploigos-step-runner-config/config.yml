@@ -37,6 +37,9 @@ step-runner-config:
   - implementer: Skopeo
     config:
       destination-url: registry-internal-nexus.apps.tssc.rht-set.com
+  - implementer: PelorusCommitTimestampMetric
+    config:
+      prometheus-pushgateway-url: https://pelorus-prometheus-pushgateway.apps.tssc.rht-set.com
 
   deploy:
   - implementer: ArgoCD
