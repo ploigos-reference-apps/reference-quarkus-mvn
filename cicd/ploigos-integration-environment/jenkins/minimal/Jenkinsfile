@@ -19,6 +19,5 @@ ploigosWorkflowMinimal(
     workflowWorkerImageDeploy: 'ploigos/ploigos-tool-argocd:v1.0.0',
 
     stepRunnerLibSourceUrl: 'git+https://github.com/cmasonrh/ploigos-step-runner.git@openscap_severity',
-
 )
 
