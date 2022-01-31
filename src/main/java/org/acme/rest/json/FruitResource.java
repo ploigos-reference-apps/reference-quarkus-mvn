@@ -23,6 +23,7 @@ public class FruitResource {
         fruits.add(new Fruit("Apple", "Winter fruit"));
         fruits.add(new Fruit("Pineapple", "Tropical fruit"));
         fruits.add(new Fruit("Banana", "Tropical fruit"));
+        fruits.add(new Fruit("Orange", "Tasty fruit"));
     }
 
     @GET
