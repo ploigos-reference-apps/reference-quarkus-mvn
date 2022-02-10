@@ -19,9 +19,9 @@ public class FruitResourceTest {
                 .when().get("/fruits")
                 .then()
                 .statusCode(200)
-                .body("$.size()", is(3),
-                        "name", containsInAnyOrder("Apple", "Pineapple", "Banana"),
-                        "description", containsInAnyOrder("Winter fruit", "Tropical fruit", "Tropical fruit"));
+                .body("$.size()", is(4),
+                        "name", containsInAnyOrder("Apple", "Pineapple", "Banana", "Orange"),
+                        "description", containsInAnyOrder("Winter fruit", "Tropical fruit", "Tropical fruit", "Tasty fruit"));
     }
 
     @Test
@@ -33,9 +33,9 @@ public class FruitResourceTest {
                 .post("/fruits")
                 .then()
                 .statusCode(200)
-                .body("$.size()", is(4),
-                        "name", containsInAnyOrder("Apple", "Pineapple", "Pear", "Banana"),
-                        "description", containsInAnyOrder("Winter fruit", "Tropical fruit", "Tropical fruit", "Winter fruit"));
+                .body("$.size()", is(5),
+                        "name", containsInAnyOrder("Apple", "Pineapple", "Banana", "Orange", "Pear"),
+                        "description", containsInAnyOrder("Winter fruit", "Tropical fruit", "Tropical fruit", "Tasty fruit", "Winter fruit"));
 
         given()
                 .body("{\"name\": \"Pear\", \"description\": \"Winter fruit\"}")
@@ -44,8 +44,8 @@ public class FruitResourceTest {
                 .delete("/fruits")
                 .then()
                 .statusCode(200)
-                .body("$.size()", is(3),
-                        "name", containsInAnyOrder("Apple", "Pineapple", "Banana"),
-                        "description", containsInAnyOrder("Winter fruit", "Tropical fruit", "Tropical fruit"));
+                .body("$.size()", is(4),
+                        "name", containsInAnyOrder("Apple", "Pineapple", "Banana", "Orange"),
+                        "description", containsInAnyOrder("Winter fruit", "Tropical fruit", "Tasty fruit", "Tropical fruit"));
     }
 }
