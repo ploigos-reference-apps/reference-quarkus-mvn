@@ -1,4 +1,4 @@
-schemaVersion: v1alpha2
+schemaVersion: 1.0.0
 metadata:
   name: reference-quarkus-mvn
 projects:
